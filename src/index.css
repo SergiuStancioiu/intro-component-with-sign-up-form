@@ -1,1 +1,10 @@
 @import 'tailwindcss';
+
+@tailwind utilities;
+
+@theme {
+  --color-custom-red: hsl(0, 100%, 74%);
+  --color-custom-purple: #5d54a3;
+
+  --font-poppins: 'Poppins', sans-serif;
+}
