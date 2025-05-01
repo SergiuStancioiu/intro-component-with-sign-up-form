@@ -3,7 +3,7 @@ import { useState } from 'react';
 function App() {
   return (
     <>
-      <div className='px-7'>
+      <div className='px-7 max-w-[460px] mx-auto'>
         <div>
           <h1 className='font-bold text-center text-white mt-[100px] text-3xl  mb-7'>
             Learn to code by watching others
@@ -14,7 +14,7 @@ function App() {
             is invaluable.
           </p>
         </div>
-        <div className='p-5 bg-custom-purple rounded-lg mb-6 '>
+        <div className='p-5 bg-custom-purple rounded-lg mb-6 border-b-8 border-custom-orange'>
           <p className='px-6 text-white text-center'>
             Try it free 7 days
             <span className='font-light text-gray-300 pl-1'>

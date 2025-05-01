@@ -5,6 +5,7 @@
 @theme {
   --color-custom-red: hsl(0, 100%, 74%);
   --color-custom-purple: #5d54a3;
+  --color-custom-orange: #da6868;
 
   --font-poppins: 'Poppins', sans-serif;
 }
