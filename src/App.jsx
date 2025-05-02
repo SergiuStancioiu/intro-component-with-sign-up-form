@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import errorIcon from '../src/assets/icon-error.svg';
+import { ToastContainer, toast } from 'react-toastify';
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -7,15 +8,29 @@ const emailRegex =
 function App() {
   const {
     register,
-    watch,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (_data) => {
+    toast.success('Form submited succesfuly!', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
+
+    reset();
+  };
 
   return (
     <>
+      <ToastContainer />
       <div className='px-7 max-w-[460px] mx-auto'>
         <div>
           <h1 className='font-bold text-center text-white mt-[60px] text-3xl  mb-7'>
